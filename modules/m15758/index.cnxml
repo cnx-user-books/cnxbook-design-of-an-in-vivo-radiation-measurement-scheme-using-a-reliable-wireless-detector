@@ -1,0 +1,290 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Design of an In-Vivo Radiation Measurement Scheme Using a Reliable Wireless Detector - Design/Implementation</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>683357d9-7e56-40cf-9bb3-c10d79e2cb55</md:uuid>
+</metadata>
+  <content>
+    <para id="id11319100">Design of an In-Vivo Radiation Measurement Scheme Using a Reliable Wireless Detector - Design/Implementation</para>
+    <para id="id11331032">Narayana Rao Vedula, Shivaranjan Vadlapudi</para>
+    <para id="id12743005">(narayanarao.v@gmail.com, shivaranjanv@gmail.com)</para>
+    <para id="id12743010">University of Minnesota- Twin cities </para>
+    <para id="id3334038">3. 1 Radiation Effect on MOSFET</para>
+    <para id="id12742944">A metal–oxide–semiconductor field-effect transistor (MOSFET) operation is based on the control of charge concentration using MOS capacitance between a body electrode and a gate electrode located above the body and insulated from all other device regions by an oxide. The MOSFET terminals consist of a drain, source, gate and body. The drain and the source terminals are connected to individual highly doped regions that are separated by the body region. The NMOS source and drain regions are 'n+' regions and the body is a 'p' region. The PMOS source and drain regions are 'p+' regions and the body is a 'n' region. The basic structure of a NMOS device is shown in Fig.1. </para>
+    <para id="id12742949">The device operates is three regions of operation as shown in Fig. 2 </para>
+    <list list-type="bulleted" id="id3256595">
+      <item><figure id="id3303812"><media id="idm4459904" alt=""><image src="../../media/graphics1.jpg" mime-type="image/jpeg" height="155" width="226"/></media></figure>Cut-off (Vgs &lt; Vth)</item>
+    </list>
+    <para id="id3438178">When the gate to source voltage of the transistor is below the threshold voltage of the device, the conduction layer below the gate is not formed as a result there is no conduction in this region ideally. In reality there is a small leakage current through the device. Fig. 1  </para>
+    <list list-type="bulleted" id="id3379565">
+      <item>Linear (Vds-Vgs&lt;Vth)</item>
+    </list>
+    <para id="id3674846"><figure id="id3674849"><media id="idm146464" alt=""><image src="../../media/graphics2.png" mime-type="image/png" height="207" width="200"/></media></figure>The linear mode of operation is reached when the gate voltage is above the threshold voltage and the channel is formed. The conduction current increases linearly with the applied drain to source voltage (Vds). The device behaves as a linear resistor.</para>
+    <list list-type="bulleted" id="id3234706">
+      <item>Saturation region (Vds-Vgs&gt;Vth)</item>
+    </list>
+    <para id="id4066405">An increase in the Vgs voltage increases the current to a large extent and due to the electronic collisions in the channel between the electrons and the atoms the speed of the electrons cannot increase above a certain level. This causes the current in the channel to saturate. Thus even when a higher Vds is given the current increase in not linear. Fig. 2</para>
+    <para id="id3298770">Fig.3
+        ***SORRY, THIS MEDIA TYPE IS NOT SUPPORTED.***
+      The ionizing radiation damage in MOS devices results from electron hole pair generation from breaking of silicon-oxygen bonds in the gate of the transistor (SiO2).This produces the build up of trapped positive charges (mainly Holes) in the insulator and negative charges are concentrated at the insulator-channel interface [10]. The electrons are swept out by the bias voltage at source and drain. As shown in figure 3.</para>
+    <para id="id3346476">The positive charge build up in the silicon dioxide gate layer adjacent to the channel causes the threshold voltage of the NMOS to reduce in magnitude and increase in magnitude for the PMOS transistor [10]. In a NMOS the trapped positive charges migrate towards the silicon-silicon dioxide interface (Positive Gate Bias) but in PMOS they migrate towards the metal gate electrode (negative gate bias). </para>
+    <para id="id3671779">The trapped charges cause the energy bands to bend. In the normal state, the Fermi levels in the silicon and insulator are equal. Thus there is an electrostatic potential difference from one region to the next. The amount of energy required to extract an electron out of the material from its Fermi level is known as the work function. The gate bias voltage is required to restore the energy bands to their flat band voltage (Vfb). The threshold voltage equation for a MOSFET is given by the equation 1.</para>
+    <para id="id4142755">…….Eq. 1<figure id="id3653761"><media id="idm3794928" alt=""><image src="../../media/graphics3.png" mime-type="image/png" height="52" width="343"/></media></figure></para>
+    <para id="id11848212">Fig. 4
+        ***SORRY, THIS MEDIA TYPE IS NOT SUPPORTED.***
+      Thus the threshold voltage is linearly proportional to the flat band voltage. The experimental results show that the flat band voltage shift is linear to the radiation received by the device. The threshold voltage change is more when thicker oxide is used. Thus the sensing device should have thicker oxide for a better radiation resolution. The change in the threshold shift is shown in the figure 4. The threshold voltage of the NMOS reduces in magnitude and increases in magnitude for the PMOS transistor [10]. The PMOS device has a negative Vth. For very high radiation dosage the Vth shift for an NMOS is towards higher Vth which produces the device rebound phenomenon. Since the target dosage of the application is below 7000CGy. This effect can be ignored.</para>
+    <para id="id3628176">3.2 Radiation Test Set-up</para>
+    <para id="id3565692">A linear accelerator was used to irradiate the transistors. The gamma rays attenuation by the human body can be modeled accurately by water. The brown block shown in the figure 5 has a density equal to water and can be used to model the human body. The DUT is placed on a skin like insulator to simulate the real skin tissue. The MOS transistors are very sensitive to static discharges thus by placing the devices in the insulator helps in shielding the gate terminal from possible discharge. The increase in the temperature of the radiated area is minimal during radiation. The humidity is fairly constant. The Test setup is shown in the figure 5. The transistors are sandwiched between two brown blocks. The thickness of each block is 5cm. Thus the transistors can be considered as being placed 5cm under the skin. </para>
+    <para id="id3384513">
+      <figure id="id3383205">
+        <media id="idp3695344" alt=""><image src="../../media/graphics4.jpg" mime-type="image/jpeg" height="288" width="207"/></media>
+      </figure>
+      <figure id="id3383797">
+        <media id="idp1431136" alt=""><image src="../../media/graphics5.jpg" mime-type="image/jpeg" height="290" width="388"/></media>
+      </figure>
+    </para>
+    <para id="id4064616">Fig. 5</para>
+    <para id="id3492838">The same test setup is used for irradiating all the transistors. The transistors are irradiated with the following specifications.</para>
+    <list list-type="bulleted" id="id3540618">
+      <item>Area of the Radiation beam : 10cm x 10cm</item>
+      <item>Depth under the skin : 5cm</item>
+      <item>Beam Energy : 6MV </item>
+    </list>
+    <table id="id3497735" summary="">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <tbody>
+          <row>
+            <entry>Dose (CGy)</entry>
+            <entry>Rate of Dose (MU/min)</entry>
+            <entry>Monitor Units(MU)</entry>
+          </row>
+          <row>
+            <entry>100</entry>
+            <entry>361</entry>
+            <entry>117</entry>
+          </row>
+          <row>
+            <entry>1000</entry>
+            <entry>354</entry>
+            <entry>1170</entry>
+          </row>
+          <row>
+            <entry>3000</entry>
+            <entry>359</entry>
+            <entry>3513</entry>
+          </row>
+          <row>
+            <entry>5000</entry>
+            <entry>375</entry>
+            <entry>5855</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para id="id3623293">Table 1</para>
+    <para id="id4065918">The Devices under test are TI-CD4007UBE and Fairchild 2N7000 (N-Channel Enhancement Mode Field Effect Transistor). These products have been selected because of their specifications such as minimum on-state resistance, rugged, reliable, and fast switching performance. For each radiation dosage two chips of each type are used to consider the effects of inter-device variations. </para>
+    <para id="id4001250">4. MOSFET Characterization</para>
+    <para id="id11242273">Fig. 6<figure id="id11900120"><media id="idp47232" alt=""><image src="../../media/graphics6.jpg" mime-type="image/jpeg" height="251" width="273"/></media></figure>The purpose of MOSFET characterization is to obtain the device operating curves accurately and estimate the transistor parameters. The characterization is performed on the transistors before and after radiation. The Test setup for this process is shown in the figure 6. Two DC generators are used for Vdd and Vgg. The gate current is measured by an ammeter Ig. The voltages Vgs (across gate and source) and Vds (across drain and source) are measured using two multimeters Vgs and Vds respectively. A resistance Rg of 1k ohm is in series with the gate circuit to protect the device from high currents. A resistance Rd is placed in series with the drain to source circuit to limit the saturation current. This resistance needs to be changed accordingly to obtain desired transistor operating curves. This value is changed from 30 Ohms to 1K Ohm. </para>
+    <para id="id3272873">Fig. 7<figure id="id3248733"><media id="idm5638768" alt=""><image src="../../media/graphics7.jpg" mime-type="image/jpeg" height="199" width="352"/></media></figure>The voltage Vgg is set at three values 2V, 3V and 5V. The voltage Vdd is varied from 0V to 8V for each value of Vgg. The readings Vgs, Id , Vds and Vrd are noted down for each iteration. The setup for the characterization is shown in the figure 7.</para>
+    <para id="id3619348">The inter-device variation was found to be minimal in the devices. The error in readings between the devices was less than 1%. The curves obtained for different radiation dosages are presented in the figure 8. </para>
+    <figure id="id4118705">
+      <media id="idp1183312" alt=""><image src="../../media/graphics8.jpg" mime-type="image/jpeg" height="340" width="600"/></media>
+    </figure>
+    <para id="id3651668">Fig. 8</para>
+    <para id="id3651673"><figure id="id3302373"><media id="idm1938688" alt=""><image src="../../media/graphics9.jpg" mime-type="image/jpeg" height="246" width="418"/></media></figure>The curves shifted up with an increase in radiation dose. The radiation dose caused the threshold voltage of the NMOS to reduce. This phenomenon can be seen clearly from the curves. For a Given Vds the current obtained is increasing. The theory behind this operation is explained in the above section. Since the theory supports the test data PMOS transistor was also tested for the same. A NMOS Transistor was irradiated on irradiated on November 23, 2007. The Vds and Ids curves of this transistor was measured on November 23,2007, November 29,2007 and November 30,2007. The change over time was very negligible. The maximum change of current (Ids) for a particular Vds was below 7%. The results obtained are presented in figure 9.</para>
+    <para id="id3388225">Fig. 9</para>
+    <para id="id3388229">Fig. 9</para>
+    <para id="id4104596"><figure id="id4104599"><media id="idm2443456" alt=""><image src="../../media/graphics10.png" mime-type="image/png" height="205" width="197"/></media></figure>5. Radiation Sensing Scheme</para>
+    <para id="id3362562">Fig. 10A CMOS inverter consists of a PMOS and a NMOS transistor arranged in a configuration as shown below. The schematic diagram of an inverter is shown in figure 10. The drain terminal of the PMOS and NMOS transistor are connected together. </para>
+    <para id="id3342566"/>
+    <para id="id3616387">Principle of Operation:</para>
+    <list list-type="bulleted" id="id3320993">
+      <item>When the input voltage to the terminal Vin is low, the PMOS transistor is turned ON and the NMOS transistor is turned OFF and output is connected to the terminal VDD via PMOS. </item>
+      <item>When the input voltage to the terminal Vin is high then the transistor NMOS is turned ON and Vout is pulled to GND potential.</item>
+      <item>Consider the terminal Vin is supplied with a saw-tooth waveform. When the voltage slowly rises from 0 to Vdd the PMOS is initially turned ON and when the voltage rises above the threshold voltage of NMOS then NMOS turns ON and PMOS is turned off pulling the voltage at Vout to GND. When the voltage drops from Vdd to 0V NMOS is initially turned ON and when the voltage reached the PMOS threshold voltage NMOS turns OFF and PMOS is turned ON.</item>
+      <item>The switching point voltage is defined as the voltage at which V(Vin) = V(Vout). The switching voltage is denoted by Vm.</item>
+    </list>
+    <para id="id3607214">The threshold voltage of the NMOS decreases and PMOS increases with radiation. The switching voltage Vm changes with an increase in radiation. The change in the switching voltages is tabulated in the table 2. </para>
+    <table id="id4154883" summary="">
+      <tgroup cols="3">
+        <colspec colnum="1" colname="c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <tbody>
+          <row>
+            <entry>Dosage (CGy)</entry>
+            <entry>Output (0-1)</entry>
+            <entry>Output (1-0 )</entry>
+          </row>
+          <row>
+            <entry>0</entry>
+            <entry>4.969</entry>
+            <entry>5</entry>
+          </row>
+          <row>
+            <entry>1000</entry>
+            <entry>4.875</entry>
+            <entry>4.719</entry>
+          </row>
+          <row>
+            <entry>3000</entry>
+            <entry>4.656</entry>
+            <entry>4.594</entry>
+          </row>
+          <row>
+            <entry>5000</entry>
+            <entry>4.375</entry>
+            <entry>4.375</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para id="id12208415">Table 2</para>
+    <para id="id3352407">The switching voltage Vm during a transition from 0 to 1 or 0V to 5V at terminal Vout is given by Output (0-1). The switching voltage Vm during a transition from 1 to 0 or 5V to 0V at terminal Vout is given by Output (1-0). </para>
+    <para id="id3541947">An increase in radiation dose causes the pulse width of the waveform at the output Vout to decrease as shown in the figure 11. The switching voltage of the inverter under radiation is modeled in HSPICE. The green waveform represents the voltage at the output Vout for a normal inverter pair. The yellow waveform represents the voltage signal at the output Vout for a radiated inverter pair. The pulse width of the waveform is reduced due to radiation effect. Thus this signal is sent to a RF chip through a capacitor (100pF) and the waveform at the output gives a measure of the radiation received by the inverter pair. </para>
+    <figure id="id3541954">
+      <media id="idm1269488" alt=""><image src="../../media/graphics11.jpg" mime-type="image/jpeg" height="364" width="600"/></media>
+    </figure>
+    <para id="id3647880">Fig. 11</para>
+    <para id="id3647885">6. RF Transmitter and Receiver:</para>
+    <para id="id4157861">The design of a reliable wireless transmitter and receiver pair is an essential step in being able to carry out the radiation dose assessment. In the proposed detector system, an RF transmitter will be placed along with the miniature bio-compatible radiation sensor and an RF receiver will be located external to the human body along with an electronics package containing the data collection and calibration unit. </para>
+    <para id="id4076914">As a proof of concept, we chose an off-the-shelf RF transmitter and receiver pair that meets our specifications. We selected TXM-916-ES (RF transmitter), RXM-916-ES (RF receiver) of Linx technologies and ANT-916-CHP-x Chip antennas from Antenna Factor for our experiment. These devices offer the advantages of 1) Ultra compact SMD packaging, 2) FM/FSK modulation for noise immunity, 3) Excellent sensitivity for outstanding range, 4) Wide range analog capability, 5) High data rate (maximum 56kbps) and 6) Cost effectiveness. They also provide useful features such as audio reference, low voltage detect and level adjustment. These modules require no tuning or any other external RF components. They operate in the 900MHz frequency band. Fig 1 illustrates the pin connections of both transmitter and receiver modules. </para>
+    <para id="id3294366">
+      <figure id="id3294369">
+        <media id="idm2834960" alt=""><image src="graphics12.wmf" mime-type="image/wmf" height="157" width="199"/></media>
+      </figure>
+      <figure id="id3250273">
+        <media id="idm3591568" alt=""><image src="graphics13.wmf" mime-type="image/wmf" height="139" width="203"/></media>
+      </figure>
+    </para>
+    <para id="id3667951">Fig. 12(i)Fig. 12(ii)</para>
+    <para id="id3389246">The output analog signal of the radiation sensor (within the specified audio bandwidth) is connected directly to the transmitter’s DATA line. The transmitter input is high impedance (500kΩ) and can be directly driven by the sensor output signal. This analog source provides no more than 5VP-P maximum waveform (within the input level) and is AC-coupled into the DATA line. The size of the coupling capacitor is selected to be large enough to ensure the passage of our signal frequencies of interest. Since the modulation voltage applied to the DATA line determines the carrier deviation, distortion can occur if the DATA line is over-driven. So, the actual level of the input waveform is adjusted to achieve optimum in-circuit results.</para>
+    <para id="id3448143">The receiver, RXM-916-ES, is capable of receiving a signal as low as -97dBm (typical). The signal is filtered at its front end by a SAW band-pass filter. The filtered signal is then amplified and down converted to the IF by mixing it with a LO frequency generated by a PLL-locked VCO. The IF is then amplified and filtered. Finally, a PLL demodulator is used for recovering the baseband analog signal from the carrier. The ES receiver features an on-board data slicer for recovery of data transmission. Its output is internally derived from the filtered analog baseband, which is squared and made externally available on the DATA line. The data slicer is capable of recreating squared waveforms from 100Hz to 28 kHz, giving a data rate bandwidth of 200bps to 56kbps.</para>
+    <para id="id3448147">1/4–wave Monopole Chip antennas based on advanced Low Temperature Co-fired Ceramic (LTCC) technology are used to transmit and receive the modulated data on both the sides of transmitter and receiver. These antennas are ideal with excellent electrical specifications delivering 50Ω characteristic impedance.</para>
+    <para id="id3448152">As explained in the previous section, the voltage signals with the frequencies 50Hz, 80Hz and 100Hz and peak-to-peak voltage 5V are given as input to the sensor. The output signals (inverted) from the sensor are connected to the DATA line of the RF transmitter. At the transmitter side, the modulated analog data is transmitted using a chip antenna. The data is received at another chip antenna on the receiver side which is then demodulated and made available at the DATA line of the RF receiver. </para>
+    <para id="id9377144">7.1 LabVIEW Setup:</para>
+    <para id="id3480651">The National Instruments LabVIEW graphical development environment helps in creating flexible and scalable design, control, and test applications. The LabVIEW VI is designed to use a National Instruments DAQ (Data Acquisition) card with the model NI-6251E and the screw terminal connector blocks with the model CB-68LP. The first part of setting up the hardware is to wire up the connector block for two analog inputs.</para>
+    <para id="id3687044">The output data of RF receiver is connected the analog input channel #2 (AI-2). The receiver GND pin is connected to the analog input gnd (AI-GND). User inputs can be taken to set the sampling rate and sample display rate. The sampling rate is set at the maximum value of 24,000 samples/sec and the display rate is set at 50 samples/sec. We can start the LabVIEW ‘Receiver_data.vi’ by clicking on the Run button on the toolbar. Data that is being read from the analog input channel will appear on a graph.</para>
+    <para id="id3687048">To store the results in a spreadsheet file, ‘Save data’ knob needs to be turned on. By default the data is stored in a file ‘radiation_rfdata.xls. After collecting enough of data into the spreadsheet, process can be halted by clicking on the same knob again. Green LED indicates that the data can be saved to a file and a red LED indicates that the saving is in progress. The spreadsheet file can be opened to examine the contents. There should be two columns of data, with a measurement point on each row. The column values are Time (sec) and output voltage read from the RF receiver DATA line (V). </para>
+    <para id="id8229098">The data is collected for different input signal frequencies (50Hz, 80Hz and 100Hz) and different radiation sensors with varied dosages (100CGy, 1000CGy, 3000CGy and 5000CGy). Each time after saving the data to a file, it is renamed to radiation_rfdata_&lt;freq&gt;_&lt;dosage&gt;.xls’ to further use them in calibration. </para>
+    <para id="id3684870">7.2 Data Analysis:</para>
+    <para id="id10486651">After saving the data to a spreadsheet file, it is analyzed to understand the radiation effects on MOS transistors. As explained before, due to the changes in sensor (inverter) characteristics with radiation, the On-time of the output signal should decrease and the Off-time of it should increase with a corresponding raise in radiation dosage. The lower the input frequency, the higher the difference in on and off times of the output signal (with increase in radiation dosage). So, the input frequencies are chosen as 50Hz, 80Hz &amp; 100Hz. This frequency cannot be lowered further because of the limitation of data slicer in RF receiver which works better for creating the squared waveforms from 100Hz to 28 kHz. So, this introduces noise for the signal frequencies 50Hz and 80Hz. </para>
+    <para id="id10486655">Using Matlab the signal noise based on its spectral characteristics was eliminated. First, the data is read from a file which is obtained from the LabVIEW program. The 512 point FFT is performed on the signal to get its power spectral plots. The plots show that there is a DC component and few unwanted high frequency signals in the spectra. So, a notch filter centered at 0Hz frequency (with a very low bandwidth) is used to eliminate the DC component. Also, a low pass filter with a cut-off frequency of 1000Hz is used to remove all the undesired high frequency components. This cannot be reduced below 1000Hz, as it causes distortion to the signal. The actual and filtered signal plots are illustrated in Fig. 13. Also, a sample power spectrum plot for a 100Hz input signal is shown in Fig. 14. </para>
+    <para id="id11551929"><figure id="id11551932"><media id="idp4369424" alt=""><image src="../../media/graphics14.jpg" mime-type="image/jpeg" height="336" width="718"/></media></figure>Fig. 13</para>
+    <figure id="id4026952">
+      <media id="idm4153824" alt=""><image src="../../media/graphics15.jpg" mime-type="image/jpeg" height="268" width="636"/></media>
+    </figure>
+    <para id="id3286608">Fig. 14</para>
+    <para id="id3612420">After filtering, few spikes still exist in the low frequency signals. The filtered signal is converted to a square wave (from 0 to 5V) based on minimum and maximum limits of 1V and 4V respectively. In this square wave, the times of first zero-to-one and one-to-zero transitions are measured in the non-spike regions. The averages of On and Off times are taken over the entire signal region to get a valid estimate of these values. An approximated square waveform is shown in the Fig 15.</para>
+    <para id="id3438192"><figure id="id3438195"><media id="idp320576" alt=""><image src="../../media/graphics16.jpg" mime-type="image/jpeg" height="334" width="672"/></media></figure>Fig. 15</para>
+    <para id="id3648968">With these filtering and analysis techniques, a good measure of the On and Off times of the signal was observed. This sequence is followed for the data of all input signals collected from the LabVIEW program for all the combinations of frequencies and radiation dosages.</para>
+    <para id="id5335534">7.3 Calibration Algorithm:</para>
+    <para id="id5335541">The On time and Off time values for different radiation dosages (100CGy, 1000CGy, 3000CGy and 5000CGy) are plotted in Table 3, for different signal frequencies (50Hz, 80Hz and 100Hz). </para>
+    <para id="id4054907">These plots illustrate the linear change in timing values with respect to radiation dosages. All the timing values for these combinations are stored in the file, ‘calibration.xls’. The measured On and Off time values are illustrated in the below table. We can clearly observe a decreasing trend in On times and an increasing trend in Off times. This data can be used to estimate the unknown dosage of an irradiated sensor (CMOS inverter). Using Matlab, the calibration data is read from the spreadsheet file. For a specific input frequency, if the measured timing values (On and Off times) lie between the corresponding values of two consecutive dosages, the unknown radiation dosage is calculated by linearly interpolating these known dosages. </para>
+    <table id="id3681246" summary="">
+      <tgroup cols="5">
+        <colspec colnum="1" colname="c1"/>
+        <colspec colnum="2" colname="c2"/>
+        <colspec colnum="3" colname="c3"/>
+        <colspec colnum="4" colname="c4"/>
+        <colspec colnum="5" colname="c5"/>
+        <tbody>
+          <row>
+            <entry>Frequency (Hz)</entry>
+            <entry>Radiation Dose (Cgy)</entry>
+            <entry namest="c3" nameend="c4">On Time (sec)</entry>
+            <entry>Off Time (sec)</entry>
+          </row>
+          <row>
+            <entry>50</entry>
+            <entry>0</entry>
+            <entry>0.0077</entry>
+            <entry namest="c4" nameend="c5">0.0122</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>1000</entry>
+            <entry>0.0068</entry>
+            <entry namest="c4" nameend="c5">0.0127</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>3000</entry>
+            <entry>0.0065</entry>
+            <entry namest="c4" nameend="c5">0.0132</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>5000</entry>
+            <entry>0.0062</entry>
+            <entry namest="c4" nameend="c5">0.0135</entry>
+          </row>
+          <row>
+            <entry>80</entry>
+            <entry>0</entry>
+            <entry>0.0045</entry>
+            <entry namest="c4" nameend="c5">0.0081</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>1000</entry>
+            <entry>0.0044</entry>
+            <entry namest="c4" nameend="c5">0.0081</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>3000</entry>
+            <entry>0.0043</entry>
+            <entry namest="c4" nameend="c5">0.0082</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>5000</entry>
+            <entry>0.0041</entry>
+            <entry namest="c4" nameend="c5">0.0083</entry>
+          </row>
+          <row>
+            <entry>100</entry>
+            <entry>0</entry>
+            <entry>0.0067</entry>
+            <entry namest="c4" nameend="c5">0.0036</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>1000</entry>
+            <entry>0.0067</entry>
+            <entry namest="c4" nameend="c5">0.0037</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>3000</entry>
+            <entry>0.0065</entry>
+            <entry namest="c4" nameend="c5">0.0037</entry>
+          </row>
+          <row>
+            <entry/>
+            <entry>5000</entry>
+            <entry>0.0064</entry>
+            <entry namest="c4" nameend="c5">0.0038</entry>
+          </row>
+        </tbody>
+      </tgroup>
+    </table>
+    <para id="id3674986">Table 3: Change in On and Off time values of sensor output with radiation</para>
+    <para id="id3637600">The overall setup is tested with few intermediate dose values (2000CGy and 4000CGy) and obtained the accurate results. As the range of difference in timing values is very less, it is very difficult to estimate the dosages exactly with smaller resolutions. </para>
+    <para id="id3637609"><figure id="id3379554"><media id="idp5572928" alt=""><image src="../../media/graphics17.png" mime-type="image/png" height="273" width="598"/></media></figure>Fig. 16</para>
+    <para id="id4126036">8.1 Design for Powering up the Sensor:</para>
+    <para id="id3628325">The Implantable Micro Devices (IMDs) need continuous power from the external world. This can be achieved by connecting a power and data cable, breaching the skin, to the IMDs. This causes the sensitive body tissues to be exposed to the environment resulting in infections. Another method is to power the IMDs using batteries which need to be replaced after a certain period of time. This requires periodic surgery, further increasing risk as well as financial burden on the part of the user. </para>
+    <para id="id3257591">An alternative to these solutions is wireless transmission of power. This can be achieved by an inductive link between two magnetically-coupled coils. It is now one of the most common methods to wirelessly transmit power from the external world to IMDs. One of the primary requirements in such a system is that the inductive power transmission should be very efficient to minimize the size of the external portable battery, and eliminate overheating of the surrounding tissue by surpassing the exposure limit to electromagnetic field.</para>
+    <para id="id3607687"><figure id="id3628330"><media id="idm304800" alt=""><image src="graphics18.wmf" mime-type="image/wmf" height="154" width="599"/></media></figure>Fig. 17</para>
+    <para id="id3686794">8.2 Power Transfer:</para>
+    <para id="id3686801">Transmitter -</para>
+    <para id="id3686805">The transmitting power through inductively coupled coils requires an AC excitation which in turn makes the power driver to be a DC to AC inverter. Furthermore, a high voltage level is usually required by the primary coil (approx. 80-100V). </para>
+    <para id="id3562354">For this, a Class-E power amplifier should be chosen to drive the transmitter coil with high efficiency (i.e., 90–95%). Class-E power amplifier drives the primary coil L1, which is coupled to the implantable coil L2. In this amplifier, a choke inductor provides constant dc current with a high-speed switching power MOSFET operating around at 500-kHz frequency, driven by the Class-E driver. </para>
+    <para id="id3609257">Receiver -</para>
+    <para id="id3668719">On the receiver side, Cr forms a resonant tank with the receiver coil L2. A bridge rectifier converts the AC signal on the receiver-tank circuit to provide a DC voltage. A low drop out regulator supplies a constant 5V supply from the output of the rectifier. This is the VDD to all the other circuitry on the implantable device side.</para>
+    <para id="id3619438">9. Bio Compatibility;</para>
+    <para id="id4073146">The use of biocompatible materials is important in determining the longevity of chronically implantable sensors. Protein adsorption is the initial event that takes place once an implant is in the body. These adsorbed proteins are then a significant influence on the subsequent adsorption of further proteins and cells. So, they dictate the interfacial reactions and ultimately biocompatibility of the material. Parylene-c and Polydimethylsiloxane (PDMS), Polypyrrole (PPY) are few materials which are biologically inert and can be used in preventing protein adsorption, a characteristic required for any implantable sensor. The device should be coated with these biocompatible passive materials which provide electrical isolation to the active areas of each array element and protect it from corrosive environments. The coating must also provide good mechanical characteristics. The observed lifetimes of the devices coated with these materials are sufficient for long-term use inside the human body. Apart from testing in air, these coated devices should also be tested in underwater using pulse excitation.<media id="idm12885072" alt=""><image src="graphics19.wmf" mime-type="image/wmf" height="26" width="64"/></media></para>
+  </content>
+</document>

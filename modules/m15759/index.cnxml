@@ -1,0 +1,37 @@
+<document xmlns="http://cnx.rice.edu/cnxml" xmlns:md="http://cnx.rice.edu/mdml">
+  <title>Design of an In-Vivo Radiation Measurement Scheme Using a Reliable Wireless Detector - Conclusions/Future Work/References</title>
+  <metadata><md:content-id>undefined</md:content-id><md:title/><md:uuid>71d65a23-0d3a-4434-b0b4-25bdcd967d0e</md:uuid>
+</metadata>
+  <content>
+    <para id="id6442826">Design of an In-Vivo Radiation Measurement Scheme Using a Reliable Wireless Detector - Conclusions/Future Work/References</para>
+    <para id="id3841284">Shivaranjan Vadlapudi, Narayana Rao Vedula</para>
+    <para id="id5217135">University of Minnesota- Twin cities </para>
+    <para id="id5217139">10. Conclusions:</para>
+    <para id="id3660204">The effect of radiation is studied on different MOS devices. The threshold voltage of a MOS transistor decreases with a raise in radiation dosage because of the trapped holes in oxide region. For an NMOS transistor, absolute value of Vt goes down making it to conduct easily, while for a PMOS transistor it works in the other way. We can make use of this cumulative effect by studying the behavior of an inverter. The On time of an inverter decreases with radiation dosage and while the Off time increases with it. With a lower frequency input signals, the range of difference in timing values can be increased. The sensor output signal is transmitted wirelessly using a transmitter/receiver pair. The receiver data signal is obtained and plotted using a DAQ (Data Acquisition) card and a LabVIEW program. The sampled data is filtered to remove the DC and undesired high frequency components. The On and off times for different radiation doses and signal frequencies are used calibrate and measure an unknown radiation dosage value. It is also observed that the irradiated device characteristics do not change with time. </para>
+    <para id="id5150852">Finally, this project implements the idea of measuring radiation dose in terms of changes in MOS transistor characteristics. Since all of the processing is done at the receiver side, no complex circuitry will be placed next to the sensor (except an RF transmitter). With this the power and size requirements will be lot lesser than other commercialized devices. As the sensors are not custom-made devices, the results did not render high resolution. </para>
+    <para id="id5179293">11. Future Work:</para>
+    <para id="id4416648">In this project, we can observe that the timing measurements show a smaller range for the total range of radiation dosages. So, custom-made MOS transistors can be used to improve this range and also the resolution to a greater extent.</para>
+    <para id="id3918543">The whole design should be fabricated into mm wide ICs which can be implanted inside human body. This is achievable with today’s nano scale fabrication technologies. Also the RF transmitter should reside on the same chip along with the sensor. For this, an elaborated design of the transmitter is required. </para>
+    <para id="id5240918">Apart from the sensor, no other device should be affected by radiation. Specialized SOI (Silicon On Insulator) or SOS (Silicon on Sapphire) fabrication techniques provide embedded protection against the radiation damage. With this, normal commercial-grade chips can withstand between 5 and 10K CGy which is far above the working range of our sensor.</para>
+    <para id="id5171763">As the On and Off time values of sensor output depend on the input signal frequency, a radiation sensor array network can be designed in such a way that each sensor in the array operates at a specific frequency. All these signals can be transmitted wirelessly and processed at the receiver side (by using a DSP circuitry) to obtain each sensor’s output signal characteristics separately.</para>
+    <para id="id3897063">References:</para>
+    <para id="id3897067"><link url="http://www.tc.umn.edu/~vadla005/Papers/A%20Comparative%20Study%20of%20Gamma%20Radiation%20Effects.pdf">1) Vivek Agarwal, V. P. Sundarsingh, and V. Ramachandran “A Comparative Study of Gamma Radiation Effects on Ultra-Low Input Bias Current Linear Circuits Under Biased Conditions</link>” IEEE TRANSACTIONS ON NUCLEAR SCIENCE, VOL. 52, NO. 2, APRIL 2005</para>
+    <para id="id3387912">2) Khalil I. Arshak, Member, IEEE, and Olga Korostynska “<link url="http://www.tc.umn.edu/~vadla005/Papers/Gamma%20Radiation%20Nose%20System%20Based.pdf">Gamma Radiation Nose System Based on In2O3=SiO Thick-Film Sensors</link>” IEEE SENSORS JOURNAL, VOL. 6, NO. 2, APRIL 2006</para>
+    <para id="id5760087">3) M. N Darwish M. C Dolly C. “A Goodwin <link url="http://www.tc.umn.edu/~vadla005/Papers/Modelling%20Radiation%20Induced%20Burnout%20in%20DMOS.pdf">Modeling of Radiation Induced Burnout in DMOS Transistors </link>“</para>
+    <para id="id3970648">4) A.S. Beddar, M. Salehpour, T.M. Brire, H. Hamidian, M.T. Gillin,“Preliminary evaluation of implantable MOSFET radiation dosimeters,” Phys.Med. Biol. 50:141-149 (2005). </para>
+    <para id="id3847184">5) C.W. Scarantino, C.J. Rini, M. Aquino, T.B. Carrea, R.D. Ornitz, M.S.Anscher, R.D. Black, “The initial clinical results of an in vivo dosimeterduring external beam radiation therapy,” Int. J. Radiat. Oncol. Biol. Phys.62(2):606-613 (2005). </para>
+    <para id="id3957222">6) C.W. Scarantino, D.M. Ruslander, C.J. Rini, G.G.Mann, H.T. Nagle, and R.D. Black, “An implantable radiation dosimeter for use in external beam radiation therapy,” Med. Phys. 31:2658-2671 (2004).</para>
+    <para id="id3810510">7) R.D. Black, C.W. Scarantino, G.G. Mann, M.S. Anscher, and R.D. Ornitz, “Ananalysis of an implantable dosimeter system for external beam therapy,”Int. J. of Radiat. Oncol. Biol. Phys. 63(1):290-300 (2005).</para>
+    <para id="id3831245">8) T.M. Briere, A.S. Beddar, and M.T. Gillin, “<link url="http://www.tc.umn.edu/~vadla005/Papers/Briere_Sicel_2005.pdf">Evaluation of precalibratedimplantable MOSFET radiation dosimeters for megavoltage photon beams</link>,” Med.Phys. 32(11):3346-9 (2005).</para>
+    <para id="id3991947">9) Project Website: www.tc.umn.edu/~vadla005</para>
+    <para id="id3202394">
+      <link url="http://www.tc.umn.edu/~vadla005">www.tc.umn.edu/~vadla005</link>
+    </para>
+    <para id="id3929063">10) George C. Messenger, and Milton S. Ash, "The Effects of Radiation on Electronic Systems," Van Nostrand Reinhold Company, New York, NY, 2005</para>
+    <para id="id5217664">
+      <figure id="id3954905">
+        <media id="idp5864736" alt=""><image src="graphics1.wmf" mime-type="image/wmf" height="26" width="64"/></media>
+      </figure>
+    </para>
+  </content>
+</document>
