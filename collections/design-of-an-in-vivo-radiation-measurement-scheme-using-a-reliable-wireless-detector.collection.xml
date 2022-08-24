@@ -1,12 +1,13 @@
-<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en">
+<?xml version="1.0"?>
+<col:collection xmlns="http://cnx.rice.edu/collxml" xmlns:col="http://cnx.rice.edu/collxml" xml:lang="en" authors="Narayana Vedula">
   <metadata xmlns:md="http://cnx.rice.edu/mdml" mdml-version="0.5">
     <md:content-id>col10508</md:content-id>
     <md:title>Design of an In-Vivo Radiation Measurement Scheme Using a Reliable Wireless Detector</md:title>
     <md:language>en</md:language>
     <md:license url="http://creativecommons.org/licenses/by/2.0/">Creative Commons Attribution License</md:license>
     <md:uuid>71c3c20c-3af5-404f-9f92-115c45d054cd</md:uuid>
-<md:slug>design-of-an-in-vivo-radiation-measurement-scheme-using-a-reliable-wireless-detector</md:slug>
-</metadata>
+    <md:slug>design-of-an-in-vivo-radiation-measurement-scheme-using-a-reliable-wireless-detector</md:slug>
+  </metadata>
   <col:content>
     <col:module document="m15757"/>
     <col:module document="m15758"/>
